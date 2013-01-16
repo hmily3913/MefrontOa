@@ -1,0 +1,13 @@
+<resources>
+
+    <string name="app_name">Mefront Oa</string>
+
+    <string name="prompt_name">用户名</string>
+    <string name="s_psd">保存密码</string>
+    <string name="svr_newmessage">收到新消息</string>
+    <string name="alert_dialog_quit_title">确认信息</string>
+    <string name="Mess_dialog_quit_title">退出后将无法实时接收即时待办信息！确定要退出吗？</string>
+    <string name="alert_dialog_ok">确定</string>
+    <string name="alert_dialog_cancel">取消</string>
+
+</resources>

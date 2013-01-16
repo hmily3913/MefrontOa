@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.Zbh.mefrontoa"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="7"
+        android:targetSdkVersion="17" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.VIBRATE"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+		<receiver   
+		    android:name="com.Zbh.mefrontoa.BootBroadcast"  
+		    android:permission="android.permission.RECEIVE_BOOT_COMPLETED">  
+		    <intent-filter>  
+		        <action android:name="android.intent.action.BOOT_COMPLETED" />  
+		    </intent-filter>  
+		</receiver>  
+		<receiver
+		    android:name="com.Zbh.mefrontoa.Alarmreceiver" >  
+		    <intent-filter>  
+		        <action android:name="mefrontoa.alarm.action" />  
+		    </intent-filter>  
+		</receiver> 
+        <activity
+            android:name="com.Zbh.mefrontoa.LoginActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustResize|stateVisible" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.Zbh.mefrontoa.UsDataActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name="com.Zbh.mefrontoa.DealActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustResize|stateVisible" >
+        </activity>
+       <service android:name="com.Zbh.mefrontoa.MSService">
+			<intent-filter>
+				<action android:name="com.Zbh.mefrontoa.START_AUDIO_SERVICE" />
+				<category android:name="android.intent.category.default" />
+			</intent-filter>
+		</service>
+        </application>
+
+</manifest>
